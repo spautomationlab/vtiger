@@ -10,10 +10,18 @@ public class OrganizationPage_Pom extends BaseClass{
 	@FindBy(xpath= "//img[@title='Create Organization...']")
 	private WebElement createOrganizationButton;
 	
-	// Getters
+	@FindBy(xpath="//img[@title=\"Search in Organizations...\"]")
+	private WebElement searchIconButton;
 	
+	// Getters
+
 	public WebElement getCreateOrganizationButton() {
 		return createOrganizationButton;
+	}
+	
+	
+	public WebElement getSearchIconButton() {
+		return searchIconButton;
 	}
 	
 	// Business Logic

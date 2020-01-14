@@ -56,7 +56,7 @@ public class HomePage_Pom {
 	@FindBy(id="qccombo")
 	private WebElement quickCreateDropDownSelection;
 	
-	@FindBy(xpath = "//span[text()=' Administrator']/../following-sibling::td/img")
+	@FindBy(xpath = "//td[@class='genHeaderSmall']/following-sibling::td/img")
 	private WebElement logoutIcon;
 	
 	@FindBy(linkText = "Sign Out")
@@ -161,8 +161,6 @@ public class HomePage_Pom {
 	public void ClickLogout() {
 		logoutIcon.click();
 		logoutLink.click();
-	}
-	
-	
+	}	
 
 }

@@ -10,10 +10,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 
 import com.vtiger.objectrepository.HomePage_Pom;
 import com.vtiger.objectrepository.LoginPage_Pom;
 
+@Listeners(com.vtiger.genericLib.Listeners.class)
 public class BaseClass {
 	public static WebDriver driver = null;
 	public DataHandlingMethod f = new DataHandlingMethod();
@@ -36,12 +38,12 @@ public class BaseClass {
 	
 	@AfterMethod 
 	public void logoutFromVtiger() throws InterruptedException {
-		HomePage_Pom hp = PageFactory.initElements(driver, HomePage_Pom.class);
-		hp.ClickLogout();
+//		HomePage_Pom hp = PageFactory.initElements(driver, HomePage_Pom.class);
+//		hp.ClickLogout();
 	}
 	
 	@AfterClass 
 	public void closeBrowser() {
-		driver.close();
+//		driver.close();
 	}
 }
